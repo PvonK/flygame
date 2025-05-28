@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://r8eaujntkyv1"]
+
+[ext_resource type="PackedScene" uid="uid://cg3m5qnyxjev4" path="res://Scenes/stilyzed_sky/sky.tscn" id="1_g5sfp"]
+[ext_resource type="Material" uid="uid://be8n0qs7yvgqa" path="res://Resources/prototype/prototype_purple_floor.tres" id="2_3dafk"]
+[ext_resource type="PackedScene" uid="uid://ctl1qybeblbof" path="res://Scenes/wall.tscn" id="3_0ejss"]
+
+[node name="MainGreyBox" type="Node3D"]
+
+[node name="World" type="Node3D" parent="."]
+
+[node name="Sky" parent="World" instance=ExtResource("1_g5sfp")]
+
+[node name="Floor" type="CSGBox3D" parent="World"]
+use_collision = true
+size = Vector3(100, 1, 100)
+material = ExtResource("2_3dafk")
+
+[node name="Wall" parent="." instance=ExtResource("3_0ejss")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 7, -26)
