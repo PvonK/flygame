@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctl1qybeblbof"]
+
+[ext_resource type="Material" uid="uid://bucsvsyhd7kcd" path="res://Resources/prototype/prototype_black_wall.tres" id="1_d155t"]
+
+[node name="Wall" type="CSGBox3D"]
+size = Vector3(39, 14, 1)
+material = ExtResource("1_d155t")
+
+[node name="Wall_support4" type="CSGPolygon3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -13.5, 0, 1.5)
+polygon = PackedVector2Array(0, -7, 0, -6, 1, 7, 1, -7)
+material = ExtResource("1_d155t")
+
+[node name="Wall_support2" type="CSGPolygon3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 14, 0, 1.5)
+polygon = PackedVector2Array(0, -7, 0, -6, 1, 7, 1, -7)
+material = ExtResource("1_d155t")
+
+[node name="Wall_support3" type="CSGPolygon3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 19.5, 0, 1.5)
+polygon = PackedVector2Array(0, -7, 0, -6, 1, 7, 1, -7)
+material = ExtResource("1_d155t")
+
+[node name="Wall_support" type="CSGPolygon3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -19, 0, 1.5)
+polygon = PackedVector2Array(0, -7, 0, -6, 1, 7, 1, -7)
+material = ExtResource("1_d155t")
