@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://r8eaujntkyv1"]
+[gd_scene load_steps=5 format=3 uid="uid://r8eaujntkyv1"]
 
 [ext_resource type="PackedScene" uid="uid://cg3m5qnyxjev4" path="res://Scenes/stilyzed_sky/sky.tscn" id="1_g5sfp"]
 [ext_resource type="Material" uid="uid://be8n0qs7yvgqa" path="res://Resources/prototype/prototype_purple_floor.tres" id="2_3dafk"]
 [ext_resource type="PackedScene" uid="uid://ctl1qybeblbof" path="res://Scenes/wall.tscn" id="3_0ejss"]
+[ext_resource type="PackedScene" uid="uid://bnt182fqhbfgv" path="res://Scenes/props/watch_tower.tscn" id="4_ljkqm"]
 
 [node name="MainGreyBox" type="Node3D"]
 
@@ -17,3 +18,6 @@ material = ExtResource("2_3dafk")
 
 [node name="Wall" parent="." instance=ExtResource("3_0ejss")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 7, -26)
+
+[node name="watch_tower" parent="." instance=ExtResource("4_ljkqm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.4322, 10.4949, -6.61696)

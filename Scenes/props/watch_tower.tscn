@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnt182fqhbfgv"]
+
+[ext_resource type="Material" uid="uid://bucsvsyhd7kcd" path="res://Resources/prototype/prototype_black_wall.tres" id="1_rln67"]
+[ext_resource type="PackedScene" uid="uid://bbl8bl1bg16n7" path="res://Scenes/props/arch.tscn" id="2_44vkm"]
+
+[node name="watch_tower" type="Node3D"]
+
+[node name="main_tower" type="CSGCylinder3D" parent="."]
+use_collision = true
+radius = 3.0
+height = 20.0
+sides = 10
+material = ExtResource("1_rln67")
+
+[node name="Arch4" parent="main_tower" instance=ExtResource("2_44vkm")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3, 6, 0)
+
+[node name="Arch3" parent="main_tower" instance=ExtResource("2_44vkm")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3, 6, 0)
+
+[node name="Arch2" parent="main_tower" instance=ExtResource("2_44vkm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 3)
+
+[node name="Arch" parent="main_tower" instance=ExtResource("2_44vkm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, -3)
+
+[node name="main_tower_negative" type="CSGCylinder3D" parent="main_tower"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0)
+operation = 2
+use_collision = true
+radius = 2.8
+height = 5.0
+sides = 10
+
+[node name="Main_tower_sphere_negative" type="CSGSphere3D" parent="main_tower/main_tower_negative"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
+radius = 2.8
+radial_segments = 10
+rings = 16
+
+[node name="Main_tower_sphere" type="CSGSphere3D" parent="main_tower"]
+transform = Transform3D(0.951471, 0, -0.307739, 0, 1, 0, 0.307739, 0, 0.951471, 0, 10, 0)
+radius = 3.0
+radial_segments = 10
+rings = 16
+material = ExtResource("1_rln67")
