@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://r8eaujntkyv1"]
+[gd_scene load_steps=7 format=3 uid="uid://r8eaujntkyv1"]
 
 [ext_resource type="PackedScene" uid="uid://cg3m5qnyxjev4" path="res://Scenes/stilyzed_sky/sky.tscn" id="1_g5sfp"]
 [ext_resource type="Material" uid="uid://be8n0qs7yvgqa" path="res://Resources/prototype/prototype_purple_floor.tres" id="2_3dafk"]
 [ext_resource type="PackedScene" uid="uid://ctl1qybeblbof" path="res://Scenes/wall.tscn" id="3_0ejss"]
+[ext_resource type="PackedScene" uid="uid://dsyu44rkiqlb0" path="res://Scenes/props/castle.tscn" id="3_4gdmq"]
+[ext_resource type="Material" uid="uid://8rybrgr70im0" path="res://Resources/prototype/prototype_black_castle.tres" id="4_0wt43"]
 [ext_resource type="PackedScene" uid="uid://bnt182fqhbfgv" path="res://Scenes/props/watch_tower.tscn" id="4_ljkqm"]
 
 [node name="MainGreyBox" type="Node3D"]
@@ -10,14 +12,19 @@
 [node name="World" type="Node3D" parent="."]
 
 [node name="Sky" parent="World" instance=ExtResource("1_g5sfp")]
+transform = Transform3D(0.990593, 5.19643e-09, 0.136839, -0.0619535, 0.89164, 0.448487, -0.122011, -0.452746, 0.883252, 0, 0, 0)
 
 [node name="Floor" type="CSGBox3D" parent="World"]
 use_collision = true
 size = Vector3(100, 1, 100)
 material = ExtResource("2_3dafk")
 
+[node name="Castle" parent="World" instance=ExtResource("3_4gdmq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.757, 4.17518, -23.1301)
+material_override = ExtResource("4_0wt43")
+
 [node name="Wall" parent="." instance=ExtResource("3_0ejss")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 7, -26)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 3, 0, -1, 0, -4.37114e-08, -39.6886, 9.69989, -26)
 
 [node name="watch_tower" parent="." instance=ExtResource("4_ljkqm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.4322, 10.4949, -6.61696)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -19.3848, 19.7889, 14.6422)
